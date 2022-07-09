@@ -1,19 +1,19 @@
 -- Create tables for raw data to be loaded into
-CREATE TABLE customer_name (
+CREATE TABLE car_name (
 id INT PRIMARY KEY,
-first_name TEXT,
-last_name TEXT
+make_name TEXT,
+model_name TEXT
 );
 
-CREATE TABLE customer_location (
+CREATE TABLE car_price (
 id INT PRIMARY KEY,
-address TEXT,
-us_state TEXT
+fuel TEXT,
+price TEXT
 );
 
 
 -- Joins tables
-SELECT customer_name.id, customer_name.first_name, customer_name.last_name, customer_location.address, customer_location.us_state
-FROM customer_name
-JOIN customer_location
-ON customer_name.id = customer_location.id;
+SELECT make_name.id, model_name, fuel_name.price_name, 
+FROM car_name
+JOIN car_price
+ON car_name.id = car_price.id;
